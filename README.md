@@ -10,9 +10,6 @@
       padding: 30px;
       background-color: #f5f5f5;
     }
-    h1 {
-      margin-bottom: 20px;
-    }
     .input-row {
       margin: 10px 0;
     }
@@ -37,28 +34,25 @@
 </head>
 <body>
 
-  <h1>금액 계산기</h1>
-
   <div class="input-row">
-    5,000원: <input type="number" id="won5000" onkeydown="nextInput(event, 'won1000')">
+    5,000원: <input type="number" id="won5000" oninput="calculateTotal()" onkeydown="nextInput(event, 'won1000')">
   </div>
   <div class="input-row">
-    1,000원: <input type="number" id="won1000" onkeydown="nextInput(event, 'won500')">
+    1,000원: <input type="number" id="won1000" oninput="calculateTotal()" onkeydown="nextInput(event, 'won500')">
   </div>
   <div class="input-row">
-    500원: <input type="number" id="won500" onkeydown="nextInput(event, 'won100')">
+    500원: <input type="number" id="won500" oninput="calculateTotal()" onkeydown="nextInput(event, 'won100')">
   </div>
   <div class="input-row">
-    100원: <input type="number" id="won100" onkeydown="nextInput(event, 'won50')">
+    100원: <input type="number" id="won100" oninput="calculateTotal()" onkeydown="nextInput(event, 'won50')">
   </div>
   <div class="input-row">
-    50원: <input type="number" id="won50" onkeydown="nextInput(event, 'won10')">
+    50원: <input type="number" id="won50" oninput="calculateTotal()" onkeydown="nextInput(event, 'won10')">
   </div>
   <div class="input-row">
-    10원: <input type="number" id="won10" onkeydown="nextInput(event, 'calculateButton')">
+    10원: <input type="number" id="won10" oninput="calculateTotal()" onkeydown="nextInput(event, 'won5000')">
   </div>
 
-  <button id="calculateButton" onclick="calculateTotal()">합계 계산</button>
   <div class="result" id="totalResult">총 합계: 0 원</div>
   <button onclick="clearAll()">클리어</button>
 
